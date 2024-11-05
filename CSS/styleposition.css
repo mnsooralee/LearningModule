@@ -1,0 +1,60 @@
+div {
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+}
+
+
+/* Z-index::
+bydefault its value is 0
+the element comes after will have higher z-index bydefault and will come forward */
+
+.divOuter {
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    /* display: inline-block; */
+}
+
+.divStatic {
+    position: static;
+    background-color: aqua;
+    /* top: 50px; or bottom: 50px will not work in static */
+}
+
+.divRelative {
+    position: relative;
+    background-color: rgb(254, 254, 2);
+    top: 20px;
+    /*top side will go down to 20px*/
+    left: 20px;
+    /*20px will go to right side*/
+    z-index: 1;
+}
+
+.divAbsolute {
+    position: absolute;
+    /* positioned relative to its closest positioned ancestor.*/
+    background-color: gray;
+    top: 20px;
+    left: 20px;
+}
+
+.divFixed {
+    position: fixed;
+    background-color: rgb(29, 245, 29);
+    top: 20px;
+    left: 220px;
+}
+
+.divSticky {
+    position: sticky;
+    background-color: rgb(252, 50, 50);
+    top: 20px;
+    left: 320px;
+}

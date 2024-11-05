@@ -1,0 +1,114 @@
+* {
+    text-align: center;
+}
+
+h1 {
+    background-color: yellow;
+}
+
+div {
+    height: 100px;
+    width: 160px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#container {
+    height: 500px;
+    width: 600px;
+    display: flex;
+    /* flex-direction: row/row-reverse/column/column; and by default it is */
+    flex-direction: row;
+    /*main axis*/
+    /*it will adjust size untill content and its font size allows*/
+    /* justify-content: flex-start/flex-end/center/space-around/space-between/space-evenly; */
+    justify-content: center;
+    /* justify-content:along main axis*/
+    flex-wrap: wrap;
+    /* flex-wrap: wrap/nowrap/wrap-reverse. nowrap bydefault */
+    align-items: center;
+    /*align-items: along cros axis*/
+    align-content: space-evenly;
+    /* ??align-content: alignment of spaces along cross axis: flex-start/flex-end/center/space-around/space-between/space-evenly */
+}
+
+#container2 {
+    height: 500px;
+    width: 600px;
+    /*flex-grow will work if container width is larger than sum of all boxes in it*/
+    /* flex-shrink will work if container width is smaller than sum of all boxes in it*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* align-content: center; */
+}
+
+#box1 {
+    background-color: aqua;
+}
+
+#box2 {
+    background-color: bisque;
+    height: 200px;
+}
+
+#box3 {
+    background-color: hotpink;
+    height: 50px;
+}
+
+#box4 {
+    background-color: yellowgreen;
+}
+
+#box5 {
+    background-color: brown;
+    height: 50px;
+}
+
+#box2_1 {
+    background-color: aqua;
+    /* align-self: center; */
+    /* bydefault center */
+    flex-shrink: 2;
+}
+
+#box2_2 {
+    background-color: bisque;
+    flex-shrink: 1;
+    /* flex-shrink will work if container width is smaller than sum of all boxes in it*/
+}
+
+#box2_3 {
+    background-color: hotpink;
+    flex-shrink: 0.5;
+}
+
+#box2_4 {
+    background-color: yellowgreen;
+    /* align-self: flex-end; */
+}
+
+#box2_5 {
+    background-color: brown;
+    /* align-self: flex-start; */
+    /* align-self: has higher priority over somethings(exp align-item)individualy even it is written on top lines */
+}
+
+#box2_6 {
+    background-color: rgb(77, 94, 252);
+    flex-grow: 1;
+    /*flex-grow will work if container width is larger than sum of all boxes in it*/
+}
+
+#box2_7 {
+    background-color: rgb(242, 255, 0);
+    flex-grow: 2;
+}
+
+#box2_8 {
+    background-color: rgb(242, 255, 0);
+    flex-grow: 4;
+}

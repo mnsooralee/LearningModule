@@ -1,0 +1,23 @@
+div {
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+}
+
+@media (max-width:600px) {
+    div {
+        background-color: black;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+    div {
+        background-color: yellowgreen;
+    }
+}
+
+@media (width: 350px) {
+    div {
+        background-color: blue;
+    }
+}

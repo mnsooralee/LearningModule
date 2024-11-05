@@ -1,0 +1,101 @@
+/* Practice set 4 */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#navbar {
+    background-color: black;
+    color: white;
+    height: 60px;
+}
+
+a {
+    margin-right: 170px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    /* background-color: white; */
+    color: #f08804;
+    /* border: 2px solid #f08804; */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #f08804;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+#content {
+    margin: 10px;
+    height: 170px;
+}
+
+.contentBox {
+    height: 150px;
+    width: 150px;
+    /* border: 2px solid black; */
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* Relative units in CSS: %, em, rem etc.
+%
+em: times of parent size 
+rem: w.r.t size of root element font body whether bydefault or set by *{}
+vh: % height of viewport(browser)
+vw: % width of viewport(browser)*/
+
+#div1 {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    margin: 10px;
+    font-size: 10px;
+}
+
+#div2 {
+    background-color: green;
+    height: 50%;
+    width: 30%;
+    margin-left: 10%;
+    display: inline-block;
+    font-size: 2em;
+    /*20px: 2 times of parent(10px)*/
+    width: 5em;
+    /*20*5=100px: 20px(font size)*5. means 5 times of font size */
+}
+
+#div3 {
+    background-color: skyblue;
+    height: 50%;
+    width: 30%;
+    margin-left: 10%;
+    display: inline-block;
+    font-size: 0.5em;
+    width: 2rem;
+    /*32px: 2 times 16(font size in body bydefault)*/
+}
+
+#div4 {
+    background-color: rgb(238, 5, 200);
+    height: 50%;
+    width: 30%;
+    margin-left: 10%;
+    /* display: inline-block; */
+}

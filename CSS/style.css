@@ -1,0 +1,262 @@
+/* css 3 is latest */
+
+
+/*1. Universal selector.
+top line code has lowest priority bottom most has the highest priority */
+
+* {
+    color: azure;
+}
+
+
+/*Element selector: h1,p,body etc*/
+
+h1 {
+    color: black;
+    background-color: #ffff00;
+}
+
+
+/* Same property can be applied to many elements. */
+
+h4,
+h5,
+h6 {
+    background-color: rgb(5, 252, 5);
+    color: black;
+}
+
+p {
+    color: rgb(252, 113, 113);
+}
+
+button {
+    color: brown;
+    background-color: rgb(24, 248, 24);
+}
+
+body {
+    background-color: black;
+}
+
+
+/* Id selector. better use it for 1 element*/
+
+#headingOne {
+    color: rgb(248, 188, 77);
+}
+
+#box {
+    color: bisque;
+}
+
+
+/*class selector. same class can be used for different elements like h1 as well as h2,p etc*/
+
+.classOne {
+    color: aqua;
+}
+
+.myClass {
+    color: rgb(255, 137, 137);
+}
+
+
+/* Text property */
+
+h3 {
+    text-align: center;
+    /*(left,right,center, start(left for english and right for urdu) & end) */
+    /* this allignment is w.r.t the particular parent element i.e p in a div that p will be in center of that div not necessarily center of full page  */
+    text-decoration: yellow dashed underline;
+    /* underline, overline, line-through, none(use it when underline bydefault like in button font), wavy dotted. use 1 or more properties like here used 3*/
+}
+
+.fwnormal {
+    font-weight: normal;
+}
+
+.fwlighter {
+    font-weight: lighter;
+}
+
+.fwbolder {
+    font-weight: bolder;
+}
+
+.fw100 {
+    font-weight: 100;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+
+/* Font family. 5 genric font families. 1,2,3 cursive: which looks like hand writing */
+
+.ffariall {
+    font-family: arial;
+}
+
+.ffmulti {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*fall back mechanism: if browser does not understand first it will chosse second one*/
+}
+
+
+/* Units in CSS: 1. Absolute 2. relaitve 
+1 inch 96 px. */
+
+.font5 {
+    font-size: 5px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font40 {
+    font-size: 40px;
+}
+
+#lineHeightSmall {
+    line-height: 5px;
+}
+
+#lineHeightBig {
+    line-height: 30px;
+}
+
+#textTransformCap {
+    text-transform: capitalize;
+    /*uppercase/ lowercase/normal*/
+}
+
+.boxModeling1 {
+    /* background-color: blue; */
+    height: 100px;
+    /*can be applied to any element*/
+    width: 300px;
+    /* width: 25%; */
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: yellow; */
+    border: 2px solid yellow;
+    border-radius: 10px;
+    /*square box with 50% radius will make circle*/
+    /* padding: 20px; will be applied to all sides */
+    padding: 10px 20px 40px 80px;
+    /* margin: 20px; same for all sides */
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.circle {
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+
+/* Display properties: block element/inline element/inline-block/none
+block elements exp: div, h1 etc
+inine elements exp: span, button, input
+inline-block */
+
+.inlineDiv {
+    display: inline;
+    /*no margin when make a block element inline. so make it inline-block*/
+    background-color: yellow;
+    color: black;
+}
+
+.blockButton {
+    background-color: yellow;
+    color: black;
+    display: block;
+}
+
+.inlineBlock {
+    display: inline-block;
+    background-color: yellow;
+    color: black;
+    margin: 15x;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.circle:hover,
+.blockButton:hover,
+.inlineBlock:hover,
+.inlineDiv:hover,
+p:hover,
+h1:hover,
+h3:hover {
+    background-color: white;
+    color: black;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
+.displayNone {
+    display: none;
+    /* DIsplay: none will hide the element and will not use the space */
+}
+
+.visibilityHidden {
+    display: inline-block;
+    visibility: hidden;
+    /* visibility: hidden: will hide the element but use and reserve the space */
+}
+
+
+/* Alpha channel */
+
+.whiteDiv {
+    background-color: white;
+    color: black;
+    height: 100px;
+}
+
+#opacDiv1 {
+    background-color: rgb(0, 0, 165, 0.2);
+    height: 120px;
+    width: 80px;
+}
+
+#opacDiv2 {
+    background-color: rgb(0, 0, 165, 0.5);
+    height: 120px;
+    width: 80px;
+}
+
+#opacDiv3 {
+    background-color: rgb(0, 0, 165, 1);
+    height: 120px;
+    width: 80px;
+}
+
+.aHeader {
+    margin-right: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.aHeader:hover {
+    background-color: yellow;
+    color: black;
+    /* border-radius: 10px; */
+}
+
+
+/* .divButton:hover {
+    border-radius: 3px;
+    display: inline-block;
+} */
