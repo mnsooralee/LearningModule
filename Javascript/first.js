@@ -319,5 +319,5 @@ switch (color) {
 //prompt("Hello"); // just gives a message like alert but also takes input
 
 //store input of prompt to a veriable
-let yourname = prompt("Name");
-console.log(yourname);
+// let yourname = prompt("Name");
+// console.log(yourname);
