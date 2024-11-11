@@ -84,7 +84,7 @@ for (let key in student) {
 
 
 let numm = 25; 
-let userNum = prompt("Guess the number: "); 
+let userNum = prompt("Guess the number: (number = 25)"); 
 while (userNum != numm) {//prompt takes string input, so do not use !==. can use !== when make num=="25" as string.
     userNum = prompt("try again");
 }

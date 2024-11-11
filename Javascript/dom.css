@@ -1,0 +1,14 @@
+#headingId {
+    color: black;
+    background-color: white;
+}
+.headingClass {
+    background-color: yellowgreen;
+}
+button:hover {
+    background-color: yellow;
+    color: black;
+}
+#buttonId {
+    background-color: yellowgreen;
+}
