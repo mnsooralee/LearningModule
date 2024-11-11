@@ -115,3 +115,4 @@ const secondTimee = sent.indexOf(firstTime+1); //returns -1. its incorrect
 const secondTime = sent.indexOf("developers", firstTime+1); //35. but did not understood how
 console.log(firstTime); //20
 console.log(secondTime); //35
+console.log("abc".toUpperCase());

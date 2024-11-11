@@ -150,3 +150,9 @@ companies.splice(1,1,"Ola");
 console.log(companies);
 companies.push("Amazom");
 console.log(companies);
+
+console.log([0,1,2].push(4));
+
+console.log("2d Arrays");
+let arr2d = [[0,1,2,3],[10,11,12,13],[20,21,22,23],[30,31,32,33]];
+console.log(arr2d);
