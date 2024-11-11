@@ -90,3 +90,10 @@ while (userNum != numm) {//prompt takes string input, so do not use !==. can use
 }
 console.log("Correct number.");
 
+
+console.log("nested loops");
+for(i = 1;i<=5;i++){
+    for(j=1;j<=5;j++){
+        console.log(i,j);
+    }
+    }
