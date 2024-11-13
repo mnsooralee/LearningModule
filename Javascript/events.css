@@ -1,0 +1,30 @@
+div {
+    background-color: yellowgreen;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+#btn1 {
+    background-color: brown;
+    color:yellowgreen;
+    font-weight: bold;
+}
+#btn2 {
+    background-color: red;
+    color: azure;
+    font-weight: bold;
+}
+#btn3 {
+    background-color: black;
+    color:yellow;
+    font-weight: bold;
+}
+.light {
+    background-color: black;
+    color: white;
+}
+.dark {
+    background-color: white;
+    color: black;
+}
