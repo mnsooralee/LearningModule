@@ -203,7 +203,7 @@ console.log(a+b);
 
 try{
     console.log(a+c);//error
-}catch(er) {
+}catch(er) {//could be any variable for error
     console.log(er);
 }
 console.log(a+b);
