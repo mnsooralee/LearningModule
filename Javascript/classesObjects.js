@@ -95,6 +95,16 @@ console.log(car1);
 console.log(car2);
 console.log(car3);
 
+class t2 extends toyotaCar {
+    constructer (bra,mil){
+        this.bra = bra;
+        this.mil = mil;
+        console.log(brand,milage);
+    }
+}
+let c2 = new t2('c2',20);
+console.log(c2);
+
 //inheritance
 class parent {
     hello() {

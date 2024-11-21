@@ -7,6 +7,7 @@ btn1.onclick = (evt) => {
     console.log(evt);
     console.log(evt.type);
     console.log(evt.clientX, evt.clientY);
+    console.log(evt.target);
 }
 
 let div = document.querySelector('div');
@@ -17,7 +18,7 @@ div.onmouseover = (e) => {
     console.log("event target:", e.target);
     console.log(e.clientX,e.clientY);
 }
-// targer: event on which thing
+// target: place(node) where event occurs
 // type: onclick or mouseover or etc.
 // client x & client: on screen where(x: horizontaly) and (y:vertically) 
 
@@ -32,6 +33,8 @@ div.onmouseover = (e) => {
 
 //many types of events but mostly used onclick, dblclick and mouseover
 let btn2 = document.querySelector('#btn2');
+
+
 btn2.addEventListener('click',() => {
     console.log('The button clicked');
 })
@@ -89,22 +92,23 @@ let currentMode = "light";
 modeBtn.addEventListener("click", ()=> {    
     if(currentMode==="light"){
         //console.log("Light theme");
-        currentMode="dark";
         document.querySelector('body').style.backgroundColor="black";
+        document.querySelector('body').style.color="white";
         console.log('You changed to dark mode');
+        currentMode="dark";
     }
     else {
         //console.log("Dark theme");
-        currentMode="light";
         document.querySelector("body").style.backgroundColor="white";
         console.log("you changed to light mode");
+        currentMode="light";
     }
 })
 
 //creating same by making light and dark them in CSS and accessing them here
 let body = document.querySelector('body');
 let currentTheme = "light";
-let themeButton = document.querySelector(".theme");
+let themeButton = document.querySelector("#theme");
 themeButton.addEventListener("click", ()=> {
     if(currentTheme==="light"){
         body.classList.add("dark");

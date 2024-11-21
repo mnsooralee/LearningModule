@@ -130,6 +130,7 @@ function callHello(hello){
 console.log("array methods");
 console.log("forEach()")
 arr = [0,1,2,3,4];
+console.log(arr);
 arr.forEach(function printValues(value){
     console.log(value);
 })
@@ -174,8 +175,11 @@ console.log("applying 3 parameters to the cities array:");
 cities.forEach((val,idx,arr) => {
     console.log(val,idx,arr);
 })
+cities.forEach((val,idx,arr) => {
+    console.log("val:",val,"index:",idx,"array:",arr);
+})
 cities.forEach((val,idx) => {
-    console.log(val,idx);
+    console.log("value and index:",val,idx);
 })
 //Higher order functions/methods: that take another function as parameter or return another function exp: forEach()
 
@@ -193,7 +197,7 @@ citiesNew = cities.map((city) => {
 })
 console.log(citiesNew);
 
-console.log("filter()")
+console.log("filter()");
 let nums = [1,2,3,4,5,6,7,8,9,10];
 console.log(nums);
 let evenNums = nums.filter((num) => {
@@ -238,12 +242,16 @@ marks = [66,92,87,74,95,63];
 let toppers = marks.filter((mark) => {
     return mark>=90; //if condition true it will return otherwise do not return
 })
-console.log(toppers);
+console.log("greater than 9:",toppers);
+toppers = marks.reduce((prev,curr) => {
+    return prev>curr ? prev : curr;
+})
+console.log("highest marks: ",toppers);
 
 //create an array till number n(input)
 //let n = prompt("please enter a number");
 let n = 6;
-let arrNew = [];
+let arrNew = []; 
 for (let i = 1; i<=n; i++){
     arrNew[i-1] = i;
 }
@@ -260,3 +268,54 @@ let fact = arrNew.reduce((prev,curr) => {
     return prev*curr;
 })
 console.log("factorial =",fact);
+ 
+//Recursion:
+console.log("Factorial:");
+
+let factorial = (n) => {
+    if(n===1) {
+      return 1;
+    }
+    else {
+      let f = factorial(n-1);
+      console.log("n = ",n,"(n-1)! = ",f,"n! = ",n*f);
+      return n * f;
+      // return n * fact(n-1);
+    }
+  }
+  let m = factorial(10);
+  console.log(m);
+console.log("Fibonacci series:");
+  let fibonacci = (n) => {
+    if(n<=1) {
+        return n;
+    }
+    return fibonacci(n-1) + fibonacci(n-2);
+  }
+ n = 10;
+ let fib;
+ for (let i = 0; i<n; i++) {
+    fib = fibonacci(i);
+    console.log(fib);
+ }
+ 
+ 
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+
+console.log(Math.random()*3); //if we need numbers from 0 to 2.99 I guess
+console.log(Math.random()*3);
+console.log(Math.random()*3);
+
+
+console.log(Math.random()*9); //if we need numbers 0 to 8.99
+console.log(Math.random()*9);
+console.log(Math.random()*9);
+
+//Math.floor() removes decimal
+console.log(Math.floor(Math.random()*9)); 
+console.log(Math.floor(Math.random()*5));
+console.log(Math.floor(Math.random()*3));
+
+ //We can make a function that performs 3-4 tasks but better to make separate functions for all the tasks so that all of the functions must be independent and can be called anytime(small tasks individually)

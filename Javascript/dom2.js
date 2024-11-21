@@ -1,8 +1,9 @@
 console.log("HW");
 let div = document.querySelector('div');
 console.dir(div);
+console.log(div);
 
-console.log(div.innerText); //erite div.innerText in console
+console.log(div.innerText); //write div.innerText in console
 //console.dir(div.innerText); //dir also prints same do not know what difference
 
 console.log(div.innerHTML);//shows inner html code
@@ -22,11 +23,11 @@ heading.innerText = "New text in heading 3";
 heading.innerHTML = "<b><i>Updated bold italic heading 3</i></b>"
 
 let hiddenHeading = document.querySelector('h4');
-console.log(hiddenHeading);
-console.log(hiddenHeading.innerText);
+console.log("hiddenHeading:",hiddenHeading); //prints HTML code
+console.log("hiddenHeading.innerText:",hiddenHeading.innerText); //prints nothing coz hidden
 // type hiddenHeading.innerText in console. output = '' because its text is invisible
 //here we'll apply textContent
-console.log(hiddenHeading.textContent);//shows invisible/hidden text
+console.log("hiddenHeading.textContent:",hiddenHeading.textContent);//shows invisible/hidden text
 //hiddenHeading.textContent in console
 
 //practice question at 6:44:00
@@ -57,6 +58,7 @@ for (div of divs){
 div = document.querySelector('div');
 console.log(div);
 
+console.log("div.getAttribute('class')");
 let classDiv = div.getAttribute('class');
 console.log(classDiv); //first div
 
@@ -103,18 +105,21 @@ para.style.fontSize = "25px";
 let btn = document.createElement('button'); //creating button
 btn.innerText = 'click me'; //text in button
 console.dir(btn);
+console.log(btn);
 
 div = document.querySelector('div');//accesing div where putting button
 console.log(div);
 
 //div.append('btn'); //it just adds text 'btn'
+//console.log(div.innerHTML);
 div.append(btn);
+//console.log(div.innerHTML);
 //div.prepend(para1);
 //div.after(btn);
 
 let para1 = document.createElement('p');
 console.log(para1);
-para1.innerText = "Inner texr created in JavaScript";
+para1.innerText = "Inner text created in JavaScript";
 let h2 = document.querySelector('h2');
 console.log(h2);
 h2.prepend(para1); //ni the start
@@ -123,18 +128,18 @@ h2.prepend(para1); //ni the start
 //h2.after(para1); //after the end 
 
 let h33 = document.createElement('h3'); //creating tag h3
-h33.innerHTML = "<b><i> heading 5 created in JavaScript</i></b>"; //writing text in h3
+h33.innerHTML = "<b><i> heading 3 created in JavaScript</i></b>"; //writing text in h3
 //let h66 = document.querySelector('h6'); //accessing h6
-document.querySelector('h6').before(h33); //placing directly
 //h66.after(h33);
 //h66.before(h33);//placing h33 in h6
+document.querySelector('h6').before(h33); //placing directly
 
 //can access direct without storing in a variale
 //document.querySelector('body').prepend(h33);
 
 //removing a node
 //para.remove();
-//document.querySelector('h6').remove(); removing directly
+//document.querySelector('h6').remove(); //removing directly
 //h2.remove();
 
 //H.W: appendChild() & removeChild()
@@ -153,5 +158,6 @@ console.log(hh1.getAttribute('class')); //hh1.getAttribute('class') in console
 //hh1.setAttribute('class','dark'); //but this will delete previous class
 console.log(hh1.classList);
 hh1.classList.add('dark');
+console.log(hh1.classList);
 //hh1.classList.remove('dark'); //removes class dark
 //hh1.classList.remove('amazom'); //removes class amazom

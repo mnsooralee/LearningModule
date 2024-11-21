@@ -1,6 +1,7 @@
 let str = "My javascript program";
 let str2 = "Practice";
-
+//let str2Length = str2.length;
+//console.log(str2Length);
 console.log(str);
 console.log(str.length);
 console.log(str2);
@@ -30,6 +31,9 @@ console.log(literalString);
 let litString = `the sum is ${2+4}`;//This is string interpolation
 console.log(litString);
 
+let ar11 = [1,2,3,4,5];
+console.log(`array is: ${arr}`);
+
 //escape characters: \n, \t
 
 console.log("My name is\nVJ."); // \n for new line. 
@@ -54,6 +58,7 @@ str = "      This     is a JS     Program      ";
 console.log(str.trim()); //trim removes spaces in beginning and in the end of " " string. 
 
 str = "0123456789";
+//slice: return the selected index values
 console.log("str.slice(2,5):",str.slice(2,5));//end index is not included
 console.log("str.slice(3,8)", str.slice(3,8));
 console.log(str.slice(3)); //starts from index: 3 till the end
@@ -116,3 +121,5 @@ const secondTime = sent.indexOf("developers", firstTime+1); //35. but did not un
 console.log(firstTime); //20
 console.log(secondTime); //35
 console.log("abc".toUpperCase());
+
+//So, while string interpolation is a key feature of template literals, the two terms are not quite the same. Template literals offer more than just interpolation—they also provide the ability to create multi-line strings and other advanced string formatting features.

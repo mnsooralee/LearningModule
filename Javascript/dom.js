@@ -24,6 +24,10 @@ console.dir(window.document);//type same in console
 console.log("console.dir(document)")
 console.dir(document); //same as console.dir(window.document); because window in bydefult
 
+// console.dir(): Primarily used to display an interactive list of the properties of an object.
+// Outputs a more detailed, navigable view of objects, showing their properties and methods in a tree-like structure.
+//In summary, console.log() is more general-purpose, while console.dir() is specifically designed for inspecting objects in detail.
+
 console.dir(document.body);//propertise, see children nodes in body
 console.log(document.body);//html code/   se difference
 console.dir(document.head);
@@ -31,14 +35,18 @@ console.log(document.head);
 console.dir(document.body.childNodes[1]);
 console.log(document.body.childNodes[1]);
 //on run time html does not changes but javascript can make changes dynamic changes that's what the use of it
-//code <document.body.style.background = "green";> in console
-document.body.style.background = "green";
+//code <document.body.style.background = "black";> in console
+document.body.style.background = "black";
+document.body.style.background = "green"; //it comes later so it is running instead of black
 document.body.childNodes[3].innerText = "abc";//this replaces <h>This is heading 1 with id: headingId</h>
+document.body.childNodes[3].style.color = "aqua";
 
 //Dom
 //dynamic changes
 //dynamic manipulation
 //if we put <script> in <head> then Dom won't run because before the start of <body> all things of body are "null"
+//When the script is in the <head>, it might run before the DOM is fully built, causing errors or issues because elements you're trying to manipulate may not exist yet.
+
 console.log("document.getElementById('headingId')");
 let heading = document.getElementById('headingId');
 console.log(heading); //prints heading
@@ -76,13 +84,15 @@ console.dir(allElements);
 console.log(allElements);
 
 //accessing id with querySelector (id does not make sense with selectorAll, said sharda, but it gives output donot understand what)
+//one id is only given to one element on the same page. btw one class can be assigned to more than 1 elements
 let elementId = document.querySelector("#headingId");//querySelector uses #id whereas getElementById uses id name without#
 console.dir(elementId);
 console.log(elementId);
 
-let allElementId = document.querySelectorAll("#headingId");//querySelector uses #id whereas getElementById uses id name without#
-console.dir(allElementId);
-console.log(allElementId);
+
+// let allElementId = document.querySelectorAll("#headingId");//querySelector uses #id whereas getElementById uses id name without#
+// console.dir(allElementId);
+// console.log(allElementId);
 
 console.log("accessing tag names");
 console.log(elementId.tagName);
@@ -112,3 +122,4 @@ console.log(document.querySelector('div').children);
 //homework: firstChild, lastChild, children,--.
 //          text node, comment node and element node
 
+//whats difference b/w queryselectorAll(".classes") and getElementsByClassName("classes)"
