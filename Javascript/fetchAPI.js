@@ -18,7 +18,7 @@ const URL = "https://cat-fact.herokuapp.com/facts";
 const getFacts = async() => {
     console.log("Getting data....");
     let response = await fetch(URL); //This is a "get request"
-    console.log(response); // JSON format
+    console.log(response); // but we need JSON format
     // can find status by console.log(response.status);
     let data = await response.json(); //Usable data
     console.log(data); //full data of 5 arrays

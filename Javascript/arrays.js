@@ -9,7 +9,7 @@ console.log(typeof marks); //object.
 //arrays are objects in JavaScript. but arrays use index:value unlike objects (key:value)
 console.log(marks[0]);//just write marks[0] in console
 console.log(marks[3]);//but this is not possible in strings
-marks[3] = 75;
+marks[3] = 75;//changes original's value
 console.log(marks);
 console.log("loops");
 //loops --> iterable (strings, objects, arrays)
@@ -32,8 +32,9 @@ for (let city of cities) {
     console.log(city);
 }
 for (let city of cities) {
-    console.log(city.toUpperCase());
+    console.log(city.toUpperCase()); //does not change original array
 }
+//console.log(cities);
 console.log("Using usual for loop");
 for (let i = 0;i<cities.length;i++) {
     console.log(cities[i])
@@ -107,11 +108,11 @@ console.log(foods);
 console.log("deleted item from foods:",deletedItem);
 
 
-//slice()
+//slice(): does not change original array. onl returns a slice
 console.log(fruits);
-console.log("fruits.slice(2,5):",fruits.slice(2,5));//ending index not included
-console.log(fruits.slice(3));//from index 3 till the end.
-
+console.log("fruits.slice(2,5):",fruits.slice(2,5));//returns values from 2 to 4. ending index not included
+console.log(fruits.slice(3));//returns values from index 3 till the end.
+console.log(fruits);
 
 //splice() : Updates the original array
 console.log("splice()");
@@ -151,8 +152,43 @@ console.log(companies);
 companies.push("Amazom");
 console.log(companies);
 
-console.log([0,1,2].push(4));
+console.log([0,1,2].push(0,9));
 
 console.log("2d Arrays");
 let arr2d = [[0,1,2,3],[10,11,12,13],[20,21,22,23],[30,31,32,33]];
 console.log(arr2d);
+
+// There are two ways to convert character to ASCII code in javascript using the below methods.
+// String.charCodeAt()
+// String.codePointAt()
+// To convert from Code Point ASCII code to character in javascript, use the below methods.
+// String.fromCharCode()
+// String.fromCodePoint()//using map(): creating function that gives every element(string) of array its first letter capitalized.
+
+
+const citiesNew = [
+    "miami",
+    "barcelona",
+    "madrid",
+    "amsterdam",
+    "berlin",
+    "sao paulo",
+    "lisbon",
+    "mexico city",
+    "paris"
+  ];
+console.log(citiesNew);
+let cnew = citiesNew.map((city) => {
+    let char = city.charCodeAt(0);
+    let charCap = char - 32;
+    let reqChar = String.fromCharCode(charCap); 
+    //console.log("city:",city,"char at index o:",city[0],"char ascii at index 0: ",char,"required ascii:", charCap,"required char:",reqChar);   
+    return city.replace(city[0],reqChar);
+})
+console.log(cnew);
+
+str = "Aacdef";
+console.log(str.charCodeAt(0));
+console.log(str.codePointAt(1));
+console.log(String.fromCharCode(97));
+console.log(String.fromCodePoint(65));

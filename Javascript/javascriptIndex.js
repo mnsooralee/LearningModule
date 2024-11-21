@@ -83,7 +83,7 @@ console.log("typeof e: ",typeof e);
 e = BigInt(150);
 console.log("e =", e);
 console.log("typeof e: ",typeof e);
-
+//Bigints don't have a fixed storage size in bits;
 e = BigInt("160");// value in "" also gives the same output.
 console.log("e =", e);
 console.log("typeof e: ",typeof e);
@@ -94,7 +94,11 @@ console.log("typeof f:", typeof f);
 f = Symbol("hello world");
 console.log("f: ",f);
 console.log("typeof f:", typeof f);
-
+let ff = Symbol("hell");
+console.log("typeof ff:", typeof ff);
+ff = BigInt(120);
+console.log("typeof ff:", typeof ff); //updated
+//whats the use of symbol
 //Non primitive datatypes are objects, functions & arrays
 //Normally initialize objects with "const", let is also used but less
 
@@ -115,6 +119,7 @@ object.key
 */
 console.log(student["fullName"]);
 console.log(student["CGPA"]);
+console.log(student.CGPA); //both correct [] & .___
 console.log(typeof student['CGPA']); //write typeof student["CGPA"] in inspects
 
 console.log("student.isPass ", student.isPass);
@@ -130,6 +135,7 @@ console.log("student.age:", student.age);
 
 student["fullName"] = "VJ";
 console.log(student["fullName"]);
+console.log(student);
 
 console.log(120+5);
 console.log("125"+5); //string concatinates
@@ -193,7 +199,7 @@ console.log(i>=j);
 
 i = "6";
 j = 6;
-console.log(typeof i);
+console.log("i = '6'; typeof i:", typeof i);
 console.log(typeof j);
 console.log(i==j);
 console.log(i>=j);
@@ -258,8 +264,9 @@ else {
   console.log("odd");
 }
 console.log("Creating GPA Calculator");
-console.log("incorrect way");//because first condition goes true then it will not check others and this way first 3-4 conditions all are true so this way is incorrect.
 let marks = 79;
+console.log(marks);
+console.log("incorrect way");//because first condition goes true then it will not check others and this way first 3-4 conditions all are true so this way is incorrect.
 if (marks>=60) console.log("2.0");
 else if (marks>=67) console.log("2.5");
 else if (marks>=74) console.log("3.0");
@@ -267,7 +274,7 @@ else if (marks>=81) console.log("3.5");
 else console.log("4.0");
 
 console.log("Incorrect way too");
-if (marks <=100) console.log("4.0 GPA");
+if (marks <=100) console.log("4.0 GPA"); 
 else if (marks <88) console.log("3.5 GPA");
 else if (marks <81) console.log("3.0 GPA");
 else if (marks <74) console.log("2.5 GPA");
@@ -285,13 +292,18 @@ else console.log("0 GPA");
 
 console.log("Ternary operators");
 //Ternary Operators: a?b:c. 
-//condition?true output:false output
+//condition? true output : false output
 //We do not usually use ternary statements, very few times and when conditions are simple not big
 age = 16;
 
 let _status = age>=18 ? "Adult" : "Not adult";
 console.log(_status);
 age>=18 ? console.log("Adult") : console.log("Not adult");//this way too
+
+let age2 = 22;
+let statusNew;
+age2>=18 ? statusNew = "adult" : statusNew = "Not adult" ;
+console.log(statusNew);
 
 //https://developer.mozilla.org/en-US/
 
