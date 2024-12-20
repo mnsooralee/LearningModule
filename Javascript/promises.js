@@ -137,3 +137,4 @@ getData(1).then((res) => {
 }).then((res) => {
     console.log(res);
 }) //Perfect. promise chain
+

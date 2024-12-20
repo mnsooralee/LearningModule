@@ -72,7 +72,7 @@ console.log("brand:",porsche.brand);
 class toyotaCar {
     //constructor() //also correct. this way just does not take parameters
     constructor(brand,milage){
-        console.log("new object created. brand ",brand,"milage: ",milage);
+        console.log("new object created. brand ",brand,"milage: ",milage);  //prints this tight when new object is created.
         this.brand = brand;
         this.milage = milage;
     }
@@ -120,8 +120,8 @@ obj.hello();
 
 class human {
     constructor(){
-        this.species = "homo sepian";
-        console.log("Curruntly in parent class");
+        this.species = "homo sepian"; //because species is constant so do not use in constructor.
+        console.log("Curruntly in parent class constructor");
     }
     eat(){
         console.log("eat");
@@ -135,10 +135,10 @@ class human {
 }
 class engineer extends human {
     constructor(branch){
-        console.log("curruntly in child class");
+        console.log("curruntly in child class constructor");
         super();//to invoke super constructor(from parent class)
         this.branch = branch;        
-        console.log("curruntly in child class");
+        console.log("curruntly in child class constructor");
     }
     work(){
         console.log("engineer");
@@ -152,7 +152,8 @@ vj.work();//method overriding
 penny.work();
 vj.sleep();
 console.log("Penny species:",penny.species);
-console.log("VJ species:",vj.species);
+console.log("VJ species:",vj.species); //from constructor of parent class
+console.log("VJ branch:",vj.branch); //from it's constructor
 
 let p1 = new human; //can write this in console
 let e1 = new engineer;
@@ -200,11 +201,19 @@ class admin extends user {
     editData() {
         data = "new updated data";
     }
+    setData(dataNew) {
+        data = dataNew;
+    }
+    updatData() {
+
+    }
 }
 let adm1 = new admin("admin1","admin@abc.com");
-console.log("now:",data);
+console.log("line 212: now:",data);
 adm1.editData();
-console.log(data);
+console.log("line 214:",data);
+adm1.setData("New updated data using function");
+console.log("line 216:",data);
 
 //error handling
 let a=10;
