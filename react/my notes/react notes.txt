@@ -1,0 +1,63 @@
+https://www.youtube.com/watch?v=bio2eP5YXyw&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&index=108
+completed but review and practice it.
+
+
+react: 105-119
+redux: 120
+NextJs: 121-138
+
+
+VS code terminal
+npx create-react-app new-app
+
+ask chatgpt every error 
+
+app.js is the main page(maybe index.html)
+
+make below javacript javascript JSX js react
+
+everything to show on page must be inside the dive <div className="App">
+rest can be above like functions in function App() before [return]
+
+my-components folder is the one that I created and the files inside it too.
+
+rafce
+runs because of these extensions: 
+ES7 React/Redux/GraphQL/React-Native snippets
+by rodrigovallades
+
+ES7+ React/Redux/React-Native snippets
+by dsznajder
+
+
+
+
+lec 106:
+using vite instead of create-react-app
+npm create vite@latest
+y
+react
+javascript
+
+vs code->terminal:
+install npm code:
+npm i
+then run dev: code
+npm run dev
+
+in react function app():
+1. need to close every tag <> then </> it is strict unlike HTML it will give error
+2. in react function app() return there must be only 1 tag that could be <div></div> or <> </> and all the code will be inside that tag there cannot be 2 tags inside the function app() return
+width={260} 
+style={{border: "2px solid black"}} //here first bracket for javascript and the other for object
+
+
+108:
+open project directly in VS code
+code -r project 
+
+useEffectSnippet(runsbecase of the extensions :ES7 React/Redux/GraphQL/React-Native snippets) 
+
+<StrictMode>
+<StrictMode> in main.jsx runs things(useeffects and likewise) two times during development not always
+can comment it out

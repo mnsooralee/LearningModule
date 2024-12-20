@@ -1,0 +1,8 @@
+.Footer {
+    text-align: center;
+    position: fixed; /*donot use usually*/
+    bottom: 0; /*donot use usually*/
+    background-color: rgb(32, 31, 31);
+    color: aliceblue;
+    width: 100%;
+}

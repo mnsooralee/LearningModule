@@ -1,13 +1,11 @@
-let fact = (n) => {
-  if(n===1) {
-    return 1;
-  }
-  else {
-    let f = fact(n-1);
-    console.log("n = ",n,"(n-1)! = ",f,"n! = ",n*f);
-    return n * f;
-    // return n * fact(n-1);
-  }
+const URL = "https://cat-fact.herokuapp.com/facts";
+
+const kk = async() => {
+  let response = await fetch(URL);
+  console.log(response);
+  let data = await response.json();
+  console.log(data);
+  console.log(data[0].text); //0th index -> text
+  console.log(data[0].status); //status on 0th index
 }
-let m = fact(10);
-console.log(m);
+console.log(kk());
