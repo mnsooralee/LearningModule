@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  gap: 34px;
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  padding: 23px;  
+}
+a li{
+  color: white;
+}
+.yellow {
+  background-color: yellowgreen;
+  color: black;
+}
